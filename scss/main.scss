@@ -2,6 +2,9 @@
 @import "home";
 @import "menu"; 
 @import "about"; 
+@import 'projects';
+@import 'contact';
+@import 'desktop';
 
 
 body {
@@ -52,8 +55,6 @@ main {
         color: $secondsary-color;
         background: rgb(50, 50, 50)(50, 50, 50);
         padding: 1rem;
-        transform: skewY(30deg);
-
       }
     }
   }

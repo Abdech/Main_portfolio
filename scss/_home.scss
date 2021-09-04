@@ -7,10 +7,12 @@
   background: linear-gradient(
       to top,
       rgba($primary-color, 0.9),
-      rgba($primary-color, 0.7)
+      rgba($primary-color, 0.4)
     ),
-    url("../../img/pexels-bongkarn-thanyakij-3787308.jpg");
+    // url("../../img/pexels-bongkarn-thanyakij-3787308.jpg");
+    url("../../img/images/white.jpg");
   background-size: cover;
+
 
   &_name {
     font-size: 5rem;

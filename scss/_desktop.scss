@@ -1,0 +1,51 @@
+@include mediaMd{
+    .menu-btn{
+        visibility: hidden;
+    }
+
+    .nav{
+        visibility: visible;
+
+        .menu-nav{
+            display: block;
+            transform: translateY(-34px);
+            height: 100%;
+            background: rgba(0,0,0,.04);
+            text-align: right;
+
+            &_item{
+                display: inline;
+                padding-right: 1.5rem;
+            }
+
+            &_link{
+                font-size: 1.2rem;
+
+            }
+        }
+    }
+
+    .about-bio{
+        font-size: 1.1rem; 
+        
+        p{
+            padding: 1rem 3rem;
+            font-style: italic;
+            text-align: center;
+        }
+
+    }
+
+    .projects{
+        &_bio-img{
+            height: 50vh;
+        }
+        &_items{
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+        .text-secondary{
+            font-size: 3rem;
+        }
+    }
+}
