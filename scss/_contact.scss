@@ -19,6 +19,12 @@
   h2{
       font-size: 3rem;
       margin-bottom: 2rem;
+      transition: all 1s ease;
+
+      &:hover{
+        transform: translateX(-10px) rotateX(360deg);
+        color: $secondsary-color;
+      }
 
   }
 
@@ -27,5 +33,16 @@
       grid-template-columns: 1fr;
       grid-gap: 1rem;
       font-size: 1.5rem;
+  }
+
+  .message{
+    margin-top: 1rem;
+  }
+
+  .social-icons{
+    position: initial;
+    margin-top: 1rem;
+   
+  
   }
 }

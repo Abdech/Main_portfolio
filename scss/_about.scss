@@ -1,3 +1,7 @@
+
+.main-about{ 
+  // background: green;
+
 .about {
   padding-bottom: 2rem;
 
@@ -15,29 +19,33 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    border: 1px solid #fff;
     
-
     p {
       margin: 0 2rem;
       font-style: italic;
       text-align: center;
-      padding-bottom: 1rem;
+      padding-bottom: 1rem;    
     }
   }
   &_bio {
     width: 80%;
     text-align: center;
-
+  
     .text-secondary {
+      color: set-text-color($primary-color);
       padding-bottom: 3rem;
+      
     }
+
+    
   }
 
   .jobs {
     width: 60vw;
     margin: 2rem auto;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 2rem;
 
     &_job {
@@ -55,6 +63,52 @@
     }
   }
 
+  .carousel{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    margin: 0 auto;
+
+    &_images{
+      display: flex;
+      transform: translateX(0);
+      transition: transform 0.25s;
+
+      img{ 
+      border-radius: 5px;
+    }
+    }
+
+    
+    &_button{
+      background: $secondsary-color;
+      border: 0;
+      border-radius: 50%;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.5rem;
+      font-weight: bold;
+      height: 3rem;
+      opacity: 0.3;
+      position: absolute;
+      transition: opacity 0.3s;
+      width: 3rem;
+      z-index: 1;
+
+      &.previous{
+        left: 5px;
+        top: 8rem;
+      }
+      &.next{
+        right: 5px;
+        top: 8rem;
+      }
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+  }
   .social-icons{
       display: flex;
       flex-direction: column;
@@ -62,9 +116,10 @@
   }
 
   footer{
+      background: rgb(118, 115, 109);
       transform:
       rotate(90deg)
-      translate(-3rem, -5rem)    
-      ;
+      translate(-3rem, -5rem);
   }
+}
 }

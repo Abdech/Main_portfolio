@@ -1,3 +1,4 @@
+
 .projects {
   padding-bottom: 2rem;
 
@@ -15,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    border: 2px solid #fff;
 
     .text-secondary {
       font-size: 2rem;
@@ -28,6 +30,28 @@
     grid-template-columns: 1fr;
     grid-gap: 2rem;
   }
+  .calender{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    padding: 1.6rem;
+  }
+#show-cal{
+    position: fixed;
+    bottom: 5rem;
+    right: 0rem ;
+    // background: orange;
+    transform: rotate(90deg);
+    padding: 1.5rem;
+    @include transition-ease;
+
+    &:hover{
+      background: $secondsary-color;
+      transform:rotate(90deg)  translateY(-30px);
+    }
+  }
+
 
   &_item {
     position: relative;
@@ -39,6 +63,7 @@
       width: 100%;
       transition: all 1.6s ease-in-out;
     }
+
 
     &::after {
       content: "";
@@ -72,7 +97,7 @@
     width: 100%;
     z-index: 1;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     align-items: center;
     text-align: center;
   }

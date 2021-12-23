@@ -37,7 +37,7 @@
     }
 
     .projects{
-        &_bio-img{
+        &-image{
             height: 50vh;
         }
         &_items{
@@ -48,4 +48,24 @@
             font-size: 3rem;
         }
     }
+
+    //I may need this later on or not
+    // .contact_list{
+    //     grid-template-columns: repeat(2, 1fr); 
+    //     grid-gap: 4rem;
+    // }
+
+   
 }
+
+@include mediaXl{
+    .projects-image{
+    height: 50vh;
+    }
+      .social-icons{
+    position: initial;
+    margin-top: 1rem;
+    background: red;
+  }
+    
+} 

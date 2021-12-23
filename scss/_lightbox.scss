@@ -1,0 +1,47 @@
+
+body{
+    
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        justify-content: center;
+        align-items: center;
+        grid-gap: 10px;
+        height: 100vh;
+        margin: 3rem 0 0 0;
+
+        img{
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+        }
+    }
+
+    #lightbox{
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0, .8);
+        display: none;
+
+        img{
+            max-width: 90%;
+            max-height: 80%;
+            padding: 4px;
+            background-color: black;
+            border: 2px solid #fff;
+            border-radius: 3%;
+        }
+
+
+        &.active{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        }
+}
+

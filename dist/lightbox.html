@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+    </style>
+    <title>Aziz Saad Portfolio</title>
+</head>
+
+<body class="shadow">
+    <header>
+        <div class="menu-btn">
+            <span class="menu-btn_burger "></span>
+        </div>
+
+        <nav class="nav">
+            <ul class="menu-nav">
+                <li class="menu-nav_item active ">
+                    <a href="index.html" class="menu-nav_link">Home
+                    </a>
+                </li>
+                <li class="menu-nav_item ">
+                    <a href="about.html" class="menu-nav_link">About me
+                    </a>
+                </li>
+                <li class="menu-nav_item ">
+                    <a href="projects.html" class="menu-nav_link">My Projects
+                    </a>
+                </li>
+                <li class="menu-nav_item ">
+                    <a href="contact.html" class="menu-nav_link">Contact me
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="lightbox">
+            <div class="grid">
+                <img src="https://source.unsplash.com/400x400?mountain" alt="">
+                <img src="https://source.unsplash.com/400x400?romantic" alt="">
+                <img src="https://source.unsplash.com/400x400?love" alt="">
+                <img src="https://source.unsplash.com/400x400?heart" alt="">
+                <img src="https://source.unsplash.com/400x400?nature" alt="">
+                <img src="https://source.unsplash.com/400x400?skyscrapper" alt="">
+                <img src="https://source.unsplash.com/400x400?affair" alt="">
+                <img src="https://source.unsplash.com/400x400?urban" alt="">
+                <img src="https://source.unsplash.com/400x400?town" alt="">
+            
+            </div>
+
+
+            <div class="social-icons">
+                <a href="">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+
+                <a href="https://web.facebook.com/abdulazeez.saad.9/">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+
+                <a href="https://web.facebook.com/abdulazeez.saad.9/">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+
+                <a href="https://web.instagram.com/abdech/">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="https://web.instagram.com/abdech/">
+                    <i class="fas fa-location-arrow"></i> lightbox
+                </a>
+            </div>
+
+            <footer> &copy; Copyright 2021</footer>
+        </section>
+    </main>
+
+    <script src="https://kit.fontawesome.com/54bd222780.js" crossorigin="anonymous"></script>
+    <script src="../../fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/js/all.js"></script>
+    <script src="js/main.js">
+
+        //lightbox 
+            const lightbox = document.createElement('div')
+            const img = document.createElement('img')
+            const images = document.querySelectorAll('img')
+
+
+            lightbox.id = 'lightbox'
+            document.body.appendChild(lightbox)
+
+
+            images.forEach(image => {
+                image.addEventListener('click', e => {
+                    lightbox.classList.add('active')
+                    img.src = e.target.src
+
+                    lightbox.appendChild(img)
+                })
+            })
+
+            lightbox.addEventListener('click', e => {
+                if (e.target !== e.currentTarget) return
+                lightbox.classList.remove('active')
+            })
+    </script>
+</body>
+
+</html>

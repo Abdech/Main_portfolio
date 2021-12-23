@@ -14,16 +14,38 @@
   background-size: cover;
 
 
-  &_name {
+  .home_name {
     font-size: 5rem;
     // padding-bottom: 1rem;
     // margin-bottom: 1rem;
     border-bottom: 2px solid set-text-color($primary-color);
+    transition: all 2s .1s ease;
+    transform: translateX(-100%) rotateX(360deg);
+    
+    &.animate{
+      transform: translateX(0px) rotateX(0deg);
+    }
 
     &_last {
       color: $secondsary-color;
       font-weight: 700; 
       @include transition-ease;
     }
+  }
+
+  .call-action{
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    color: $color ;
+    background: $secondsary-color;
+    border: none;
+    font-size: 1.4rem;
+    display: inline-block;
+    @include transition-ease;
+
+    &:hover{
+      transform: scale(1.1);
+    }
+
   }
 }
