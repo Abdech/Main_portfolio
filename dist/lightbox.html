@@ -42,6 +42,7 @@
 
     <main>
         <section class="lightbox">
+            <h3>Lightbox</h3>
             <div class="grid">
                 <img src="https://source.unsplash.com/400x400?mountain" alt="">
                 <img src="https://source.unsplash.com/400x400?romantic" alt="">
@@ -83,32 +84,7 @@
 
     <script src="https://kit.fontawesome.com/54bd222780.js" crossorigin="anonymous"></script>
     <script src="../../fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/js/all.js"></script>
-    <script src="js/main.js">
-
-        //lightbox 
-            const lightbox = document.createElement('div')
-            const img = document.createElement('img')
-            const images = document.querySelectorAll('img')
-
-
-            lightbox.id = 'lightbox'
-            document.body.appendChild(lightbox)
-
-
-            images.forEach(image => {
-                image.addEventListener('click', e => {
-                    lightbox.classList.add('active')
-                    img.src = e.target.src
-
-                    lightbox.appendChild(img)
-                })
-            })
-
-            lightbox.addEventListener('click', e => {
-                if (e.target !== e.currentTarget) return
-                lightbox.classList.remove('active')
-            })
-    </script>
+    <script src="js/main.js"> </script>
 </body>
 
 </html>
